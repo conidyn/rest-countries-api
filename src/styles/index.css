@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+    --dark-blue-dark-mode-elements : hsl(209, 23%, 22%);
+    --very-dark-blue-dark-mode-background: hsl(207, 26%, 17%);
+    --very-dark-blue-light-mode-text: hsl(200, 15%, 8%);
+    --dark-gray-light-mode-input: hsl(0, 0%, 52%);
+    --very-light-gray-light-mode-background: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.light-mode {
+   background-color: var(--very-light-gray-light-mode-background);
+    /* background */
+    --very-dark-blue: hsl(207, 26%, 17%);
+    /* elements */
+    --dark-blue : hsl(209, 23%, 22%);
+    /* text */
+    --white: hsl(0, 0%, 100%);
+}
+
+.dark-mode {
+   background-color: var(--very-dark-blue-dark-mode-background);
+    --background: hsl(207, 26%, 17%);
+    /* inputs */
+    --dark-gray: hsl(0, 0%, 52%);
+    /* elements */
+    --dark-blue : hsl(209, 23%, 22%);
+    /* elements */
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.page-container {
+    padding: 0 2.5em;
+}

@@ -1,3 +1,5 @@
+import './CountryCard.css';
+
 type Props = {
     name: string;
     capital: string;
