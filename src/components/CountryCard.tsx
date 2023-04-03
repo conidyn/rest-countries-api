@@ -1,4 +1,4 @@
-import './CountryCard.css';
+import '../styles/CountryCard.scss';
 
 type Props = {
     name: string;

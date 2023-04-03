@@ -1,5 +1,6 @@
 import { BsFillMoonFill, BsMoon } from 'react-icons/bs';
 import {Theme} from './Layout';
+import '../../styles/Header.scss';
 
 type Props = {
     theme: Theme;
@@ -13,8 +14,10 @@ export const Header = ({theme, handleTheme}: Props) => {
 
     return (
         <header>
-            <h1>Where in the world?</h1>
-            <button onClick={handleTheme}>{icon} {theme} Theme</button>
+            <div className={"header-content"}>
+                <h1>Where in the world?</h1>
+                <button onClick={handleTheme}>{icon} {theme} Theme</button>
+            </div>
         </header>
     )
 } 

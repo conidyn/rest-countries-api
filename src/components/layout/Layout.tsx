@@ -1,6 +1,5 @@
 import {useState, PropsWithChildren} from "react";
 import { Header } from "./Header";
-
 export type Theme = 'light' | 'dark';
 
 export const Layout = ({children}: PropsWithChildren) => {

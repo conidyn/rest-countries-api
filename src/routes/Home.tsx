@@ -1,6 +1,6 @@
 import {CountryCard} from "../components/CountryCard";
 import countries from "../data.json";
-import '../styles/index.css'
+import '../styles/index.scss'
 
 export const Home = () => {
     return (
