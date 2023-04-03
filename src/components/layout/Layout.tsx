@@ -10,7 +10,7 @@ export const Layout = ({children}: PropsWithChildren) => {
     return (
         <div className={`layout ${theme}-mode`}>
             <Header theme={theme} handleTheme={handleTheme}/>
-            {children}
+            <main>{children}</main>
         </div>
     )
 }
