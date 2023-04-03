@@ -1,0 +1,30 @@
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    width: 32.5em;
+    height: 3em;
+    margin-bottom: 2.5em;
+    
+    .search-icon-container {
+        padding: 0 1.6em;
+    }
+    
+    input {
+        width: 100%;
+        border: none;
+    } & :focus-visible {
+        outline: none;
+    }
+}
+
+.dark-mode {
+    .search-bar-container {
+        background-color: var(--dark-blue-dark-mode-elements);
+        color: var(--white);
+    }
+
+    input, input::placeholder {
+        background-color: var(--dark-blue-dark-mode-elements);
+        color: var(--white);
+    }
+}

@@ -1,13 +1,23 @@
-.country-card-img-container {
-    width: 100%;
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2.5em;
+
+    .country-card {
+        width: 20em;
+    }
+
+    .country-card-img-container {
+        img {
+            width: 20em;
+            height: auto;
+        }
+    }
 }
 
-.country-card {
-    width: 21%;
-    margin-bottom: 50px;
-}
-
-.country-card-img-container img {
-    width: 100%;
-    height: auto;
+.dark-mode {
+    .country-card {
+        background-color: var(--dark-blue-dark-mode-elements);
+    }
 }
