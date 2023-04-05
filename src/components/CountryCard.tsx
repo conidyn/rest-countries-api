@@ -16,7 +16,7 @@ export const CountryCard = ({name, capital, region, population, img}: Props) => 
             </div>
             <div className='cards-text'>
                 <h2>{name}</h2>
-                <p><b>Population:</b> {population}</p>
+                <p><b>Population:</b> {population.toLocaleString("en-US")}</p>
                 <p><b>Region:</b> {region}</p>
                 <p><b>Capital:</b> {capital}</p>
             </div>
