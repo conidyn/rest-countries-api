@@ -6,14 +6,29 @@
 
     .country-card {
         width: 20em;
+        height: 25em;
     }
 
     .country-card-img-container {
         img {
             width: 20em;
-            height: auto;
+            height: 12em;
         }
     }
+
+    .cards-text {
+        padding: 1.3em 1.7em;
+    }
+
+    .cards-text h2 {
+        margin-bottom: 1.2em;
+    }
+
+    .cards-text p {
+        font-size: 1em;
+
+    }
+
 }
 
 .dark-mode {

@@ -14,11 +14,11 @@ export const CountryCard = ({name, capital, region, population, img}: Props) => 
             <div className="country-card-img-container">
                 <img src={img} alt="country-flag" />
             </div>
-            <div>
+            <div className='cards-text'>
                 <h2>{name}</h2>
-                <p>Population: {population}</p>
-                <p>Region: {region}</p>
-                <p>Capital: {capital}</p>
+                <p><b>Population:</b> {population}</p>
+                <p><b>Region:</b> {region}</p>
+                <p><b>Capital:</b> {capital}</p>
             </div>
         </div>
     )
