@@ -1,20 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Country, Countries } from '../types';
 import { CountryCard } from "../components/CountryCard";
 import { SearchBar } from '../components/SearchBar';
 import countries from "../data.json";
 import '../styles/index.scss'
+import { filterByCharacter } from "../helpers";
 
 export const Home = () => {
-    const [country, setCountry] = useState<string>("");
-    const [searchedCountry, setSearchCountry] = useState<Country | null>(null);
-    const handleSetCountry = (value: string) => setCountry(value);
+    const [countryInput, setCountryInput] = useState<string>("");
+    const [searchedCountries, setSearchCountries] = useState<Countries | []>(countries);
+    const handleSetCountry = (value: string) => setCountryInput(value);
+
+    useEffect(() => {
+        setSearchCountries(filterByCharacter(countryInput, countries))
+    }, [countryInput])
 
     return (
         <div className={"dark-theme"}>
-            <SearchBar handleChange={handleSetCountry} value={country} />
+            <SearchBar handleChange={handleSetCountry} value={countryInput} />
             <div className={"cards-container"}>
-                {countries.map(country => (
+                {searchedCountries.map(country => (
                     <CountryCard 
                         key={country.name}
                         name={country.name}
