@@ -15,7 +15,7 @@ export const SearchBar = ({handleChange, value}: Props) => {
             <input 
                 type="text" 
                 placeholder="Search for a country..." 
-                value={value} 
+                value={value}
                 onChange={(e) => handleChange(e.target.value)} 
             />
         </div>
