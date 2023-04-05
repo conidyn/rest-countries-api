@@ -27,6 +27,7 @@ export const Home = () => {
                         region={country.region}
                         capital={country.capital || ''}
                         img={country.flags.png}
+                        numericCode={country.numericCode}
                     />
                 ))}
             </div>

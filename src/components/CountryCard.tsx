@@ -1,16 +1,20 @@
+import { useNavigate } from 'react-router-dom';
 import '../styles/CountryCard.scss';
 
 type Props = {
     name: string;
     capital: string;
-    region: string; 
+    region: string;
     population: number;
     img: string;
+    numericCode: string;
 }
 
-export const CountryCard = ({name, capital, region, population, img}: Props) => {
+export const CountryCard = ({ name, capital, region, population, img, numericCode }: Props) => {
+    const navigate = useNavigate();
+
     return (
-        <div className="country-card">
+        <div className="country-card" onClick={() => navigate(`country/${numericCode}`)}>
             <div className="country-card-img-container">
                 <img src={img} alt="country-flag" />
             </div>
