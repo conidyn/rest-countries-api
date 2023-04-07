@@ -1,6 +1,28 @@
 .country-details-container {
     display: flex;
     flex-direction: column;
+    height: calc(100vh  - 6em);
+}
+
+.country-details-content {
+    display: flex;
+    gap: 5em;
+}
+
+.flag-container {
+    width: 50%;
+    img {
+        width: 100%;
+    }
+}
+
+.details-container {
+    width: 50%;
+    border: 1px solid red;
+}
+
+.back-btn-container {
+    margin-bottom: 5em;
 }
 
 .back-btn {
