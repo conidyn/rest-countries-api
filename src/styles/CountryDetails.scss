@@ -1,0 +1,40 @@
+.country-details-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7em;
+    height: 2.4em;
+    gap: 0.5em;
+    border: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    .back-btn-icon {
+        font-size: 1.3em;
+    }
+    
+    p {
+        font-size: 0.9em;
+    }
+}
+
+.light-mode {
+    .back-btn {
+        background-color: var(--white);
+    }
+}
+
+
+.dark-mode {
+    .back-btn {
+        background-color: var(--dark-blue-dark-mode-elements);
+        color: var(--white)
+    }
+}
+
