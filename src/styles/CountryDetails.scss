@@ -11,14 +11,24 @@
 
 .flag-container {
     width: 50%;
+    height: 400px;
+
     img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
 .details-container {
     width: 50%;
-    border: 1px solid red;
+}
+
+.details-container h2 {
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+    
 }
 
 .back-btn-container {
@@ -60,3 +70,38 @@
     }
 }
 
+.details-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details-infos {
+    display: flex;
+    justify-content: space-between;
+    width: 76%;
+    height: 11.6em;
+    line-height: 1.6em;
+}
+
+.details-infos li {
+    display: flex;
+    width: auto;
+    font-size: 0.9em;
+}
+
+.infos-left {
+    margin-right: 2em;
+}
+
+.details-borders {
+    display: flex;
+}
+
+.languages-list {
+    display: flex;
+}
+
+.borders-name-container {
+    
+}

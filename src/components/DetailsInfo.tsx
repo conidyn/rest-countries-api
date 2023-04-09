@@ -16,8 +16,12 @@ export const DetailsInfo = ({ description, value, currencies, languages }: Props
                 </ul>
             )}
             {languages && languages.length > 0 && (
-                <ul>
-                    {languages.map(({ name }, i) => <li key={`name-${i}`}>{name}</li>)}
+                <ul className={"languages-list"}>
+                    {languages.map(({ name }, i) =>
+                            <li key={`name-${i}`}>
+                                {`${name}${i !== languages.length -1 ? ',': ''}`}&nbsp;
+                            </li>
+                        )}
                 </ul>
             )}
             {Array.isArray(value)
@@ -33,7 +37,7 @@ export const DetailsInfo = ({ description, value, currencies, languages }: Props
 
     return (
         <li>
-            <span>{description}: &nbsp;</span>
+            <span><b>{description}</b>: &nbsp;</span>
             {$value}
         </li>
 

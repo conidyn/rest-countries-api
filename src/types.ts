@@ -16,6 +16,7 @@ export interface Country {
   area?: number
   timezones: string[]
   borders?: string[]
+  bordersName?: string[] | []
   nativeName: string
   numericCode: string
   flags: Flags
