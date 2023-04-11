@@ -1,0 +1,47 @@
+.filter-region-container {
+    position: relative;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    width: 18em;
+    cursor: pointer;
+}
+
+.filter-btn, .dropdown-container {
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 0 1rem;
+}
+
+.dropdown-container {
+    position: absolute;
+    width: 100%;
+    margin-top: 5px;
+
+    li {
+        margin: 0.4rem 0;
+        padding: 0.2rem 0;
+        cursor: pointer;
+   }
+}
+
+
+.dark-mode {
+    .filter-btn, .dropdown-container {
+        background-color: var(--dark-blue-dark-mode-elements);
+        color: var(--white);
+    }
+}
+
+.light-mode {
+    .filter-btn, .dropdown-container {
+        background-color: var(--white);
+        color: var(--dark-gray-light-mode-input);
+    }
+}
+

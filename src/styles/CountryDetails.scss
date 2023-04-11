@@ -35,7 +35,7 @@
     margin-bottom: 5em;
 }
 
-.back-btn {
+.back-btn, .border-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,18 +57,20 @@
 }
 
 .light-mode {
-    .back-btn {
+    .back-btn, .border-item {
         background-color: var(--white);
     }
 }
 
 
 .dark-mode {
-    .back-btn {
+    .back-btn, .border-item {
         background-color: var(--dark-blue-dark-mode-elements);
         color: var(--white)
     }
 }
+
+
 
 .details-content {
     display: flex;
@@ -96,6 +98,7 @@
 
 .details-borders {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .languages-list {
@@ -103,5 +106,20 @@
 }
 
 .borders-name-container {
+    display: flex;
+    font-size: 0.9em;
     
+    span {
+        width: 150px;
+    }
+    
+    ul {
+        display: flex;
+        gap: 0.4em;
+    }
+}
+
+.border-item {
+    inline-size: max-content;
+    padding: 0 10px;
 }

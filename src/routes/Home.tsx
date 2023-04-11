@@ -5,6 +5,7 @@ import { SearchBar } from '../components/SearchBar';
 import countries from "../data.json";
 import '../styles/index.scss'
 import { filterByCharacter } from "../helpers";
+import { FilterByRegion } from "../components/FilterByRegion";
 
 export const Home = () => {
     const [countryInput, setCountryInput] = useState<string>("");
@@ -16,8 +17,11 @@ export const Home = () => {
     }, [countryInput])
 
     return (
-        <div className={"dark-theme"}>
-            <SearchBar handleChange={handleSetCountry} value={countryInput} />
+        <div>
+            <div className="search-header">
+                 <SearchBar handleChange={handleSetCountry} value={countryInput} />
+                 <FilterByRegion />
+            </div>
             <div className={"cards-container"}>
                 {searchedCountries.map(country => (
                     <CountryCard 

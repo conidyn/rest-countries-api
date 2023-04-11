@@ -16,6 +16,7 @@ export const CountryDetails = () => {
         }
     }, [numericCode])
 
+
     console.log(countryDetails)
     return (
         <div className="country-details-container">
@@ -50,13 +51,17 @@ export const CountryDetails = () => {
                                 </ul>
                                 {countryDetails.bordersName && countryDetails.bordersName.length > 0 && (
                                     <div className="borders-name-container">
-                                        <b>Border Countries:</b>
+                                        <span><b>Border Countries:</b></span>
                                         <ul className={"details-borders"}>
-                                            {countryDetails.bordersName.map((name, i) => (
-                                                <li key={`border-name-${i}`}>
-                                                    {name}
-                                                </li>
-                                            ))}
+                                            {countryDetails.bordersName.map((name, i) => {
+                                                const currentCountry = countries.find((item) => item.name === name);
+                                                console.log(currentCountry)
+                                                return (
+                                                    <button key={`border-name-${i}`} className={"border-item"} onClick={() => navigate(`../country/${currentCountry?.numericCode}`, {replace: true})}>
+                                                        {name}
+                                                    </button>
+                                                )
+                                            })}
                                         </ul>
                                     </div>
                                 )}
