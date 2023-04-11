@@ -68,3 +68,5 @@ export interface RegionalBloc {
   otherNames?: string[]
   otherAcronyms?: string[]
 }
+
+export type FilterByRegiontType = 'America' | 'Africa' | 'Asia' | 'Oceania' | 'Europe' | 'All';
